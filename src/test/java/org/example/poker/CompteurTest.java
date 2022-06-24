@@ -1,5 +1,6 @@
-package org.example.poker.example;
+package org.example.poker;
 
+import org.example.poker.example.Compteur;
 import org.junit.jupiter.api.*;
 
 import java.util.Arrays;

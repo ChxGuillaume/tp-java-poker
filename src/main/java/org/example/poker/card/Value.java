@@ -1,5 +1,7 @@
 package org.example.poker.card;
 
+import java.util.Comparator;
+
 public enum Value {
     DEUX('2', 2),
     TROIS('3', 3),
@@ -41,4 +43,6 @@ public enum Value {
             default: return AS;
         }
     }
+
+    public static final Comparator<Value> comparator = (value1, value2) -> value1.score - value2.score;
 }

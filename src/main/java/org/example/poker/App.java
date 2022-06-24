@@ -1,3 +1,5 @@
+package org.example.poker;
+
 import org.example.poker.card.Card;
 import org.example.poker.hand.Hand;
 
@@ -12,4 +14,18 @@ public class App {
         );
         System.out.println(hand);
     }
+
+    public static Winner winner(Hand hand1, Hand hand2) {
+        int winner = Hand.comparator.compare(hand1, hand2);
+
+        if (winner > 0) {
+            return Winner.Hand1;
+        } else if (winner < 0) {
+            return Winner.Hand2;
+        }
+
+        return Winner.Tie;
+    }
 }
+
+enum Winner { Hand1, Hand2, Tie }
